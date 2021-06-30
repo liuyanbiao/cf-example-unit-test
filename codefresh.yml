@@ -7,10 +7,12 @@ steps:
   main_clone:
     title: Cloning main repository...
     type: git-clone
-    repo: 'liuyanbiao/cf-example-unit-test'
-    revision: 'master'
-    git: github
     stage: prepare
+    arguments: 
+      repo: 'liuyanbiao/cf-example-unit-test'
+      revision: 'master'
+      git: github
+   
   run_my_tests_before_build:
     title: Running Unit tests directly
     stage: 'Microservice A'
